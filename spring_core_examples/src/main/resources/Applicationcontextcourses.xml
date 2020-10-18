@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xmlns:context="http://www.springframework.org/schema/context"
+	
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+<bean id="techcourse1" class="com.courses.Course">
+		<property name="name" value="java"></property>
+		<property name="mentor" value="satish"></property>
+		<property name="fee" value="1000"></property>
+
+</bean>
+<bean id="techcourse2" class="com.courses.Course">
+		<property name="name" value="python"></property>
+		<property name="mentor" value="kanimozhi"></property>
+		<property name="fee" value="2000"></property>
+
+</bean>
+<bean id="techcourse3" class="com.courses.Course">
+		<property name="name" value="selenium"></property>
+		<property name="mentor" value="arun"></property>
+		<property name="fee" value="500"></property>
+
+</bean>
+<bean id="courseList" class="com.courses.CoursesList">
+<property name="courseList" >
+<list>
+<ref bean="techcourse1"/>
+<ref bean="techcourse2"/>
+<ref bean="techcourse3"/>
+</list>
+</property>
+</bean>
+
+
+</beans>
